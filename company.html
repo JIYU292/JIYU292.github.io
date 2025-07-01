@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>同心科技 - 企业官网</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            background: #2c3e50;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        /* 横幅大图 */
+        .banner {
+            background: url('https://ts1.tc.mm.bing.net/th/id/R-C.71c5d573c18d93044d8da582263d0240?rik=JBOy%2fsFLWYlzKQ&riu=http%3a%2f%2fimg95.699pic.com%2fphoto%2f40175%2f8474.jpg_wh860.jpg&ehk=IoXMuLhYUiMja4%2ftiPa9%2f64nhHsNkLndTimbaNuOcCc%3d&risl=&pid=ImgRaw&r=0') no-repeat center;
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .banner-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .banner-content p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+        }
+        
+        /* 内容区块 */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+        
+        /* 产品展示 */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .product-img {
+            height: 200px;
+            background: #f1f1f1;
+            background-size: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        /* 联系表单 */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        /* 页脚 */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .navbar-container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+            
+            .nav-links a {
+                margin: 0 10px;
+            }
+            
+            .banner {
+                height: 400px;
+            }
+            
+            .banner-content h1 {
+                font-size: 36px;
+            }
+            
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href=" " class="logo">同心科技</a >
+            <div class="nav-links">
+                <a href="#home">首页</a >
+                <a href="#products">产品</a >
+                <a href="#about">关于我们</a >
+                <a href="#contact">联系我们</a >
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 横幅大图 -->
+    <section class="banner" id="home">
+        <div class="banner-content">
+            <h1>创新科技 引领未来</h1>
+            <p>我们致力于为客户提供最前沿的技术解决方案，帮助企业实现数字化转型</p >
+            <a href="#contact" class="btn">立即咨询</a >
+        </div>
+    </section>
+    
+    <!-- 产品展示 -->
+    <section class="section" id="products">
+        <h2 class="section-title">我们的产品</h2>
+        <div class="products">
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://img95.699pic.com/photo/50053/9195.jpg_wh860.jpg');"></div>
+                <div class="product-info">
+                    <h3>企业级解决方案</h3>
+                    <p>专为大型企业设计的全方位技术服务，助力业务增长</p >
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://img95.699pic.com/photo/40174/6902.jpg_wh300.jpg!/fh/300/quality/90');"></div>
+                <div class="product-info">
+                    <h3>云服务平台</h3>
+                    <p>安全可靠的云计算服务，随时随地访问您的数据</p >
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://pic3.zhimg.com/v2-c023e9dbb9e73acf5d0054e0e418782a_r.jpg');"></div>
+                <div class="product-info">
+                    <h3>数据分析工具</h3>
+                    <p>强大的数据分析能力，洞察商业机会</p >
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 关于我们 -->
+    <section class="section" id="about" style="background: #f9f9f9;">
+        <h2 class="section-title">关于我们</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>科技未来成立于2010年，是一家专注于企业数字化转型的高科技公司。我们拥有超过200名专业技术人员，服务全球500强企业超过100家。</p >
+            <p>我们的使命是通过技术创新帮助客户实现业务突破，愿景是成为全球领先的企业技术服务提供商。</p >
+        </div>
+    </section>
+    
+    <!-- 联系我们 -->
+    <section class="section" id="contact">
+        <h2 class="section-title">联系我们</h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">留言</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">提交</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2023 科技未来 版权所有</p >
+        <p>地址：北京市海淀区科技园路88号 | 电话：010-88889999</p >
+    </footer>
+</body>
+</html>
